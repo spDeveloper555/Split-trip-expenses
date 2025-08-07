@@ -11,7 +11,10 @@ class SettlementDetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Trips Settlement'),backgroundColor: AppStyles.whiteColor),
+      appBar: AppBar(
+        title: Text('Trips Settlement'),
+        backgroundColor: AppStyles.whiteColor,
+      ),
       body: Container(
         color: AppStyles.whiteColor, // or any color like Color(0xFF25334A)
         child: ValueListenableBuilder<Box<Trip>>(
@@ -87,75 +90,66 @@ class SettlementDetailsPage extends StatelessWidget {
                             'Total expenses: ₹ ${totalAmount}',
                             style: TextStyle(fontSize: 16),
                           ),
-                          DataTable(
-                            columns: const [
-                              DataColumn(
-                                label: SizedBox(
-                                  width: 50,
-                                  child: Text(
+                          Center(
+                            child: DataTable(
+                              columns: const [
+                                DataColumn(
+                                  label: Text(
                                     'Name',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ),
-                              ),
-                              DataColumn(
-                                label: SizedBox(
-                                  width: 35,
-                                  child: Text(
+                                DataColumn(
+                                  label: Text(
                                     'Paid',
                                     style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ), // Paid icon
                                 ),
-                              ),
-                              DataColumn(
-                                label: SizedBox(
-                                  width: 35,
-                                  child: Icon(
+                                DataColumn(
+                                  label: Icon(
                                     Icons.call_received,
                                     size: 20,
                                     semanticLabel: 'Credit',
-                                  ), // Credit icon
+                                  ),
                                 ),
-                              ),
-                              DataColumn(
-                                label: SizedBox(
-                                  width: 35,
-                                  child: Icon(
+                                DataColumn(
+                                  label: Icon(
                                     Icons.call_made,
                                     size: 20,
                                     semanticLabel: 'Debit',
                                   ), // Debit icon
                                 ),
-                              ),
-                            ],
-                            rows:
-                                members.map((name) {
-                                  int paid = paidAmounts[name] ?? 0;
-                                  double credit = splitedAmount;
-                                  double creditPerPerson = paid - credit;
-                                  if (creditPerPerson < 0) creditPerPerson = 0;
-                                  double remaining = credit - paid;
-                                  if (remaining < 0) remaining = 0;
+                              ],
+                              rows:
+                                  members.map((name) {
+                                    int paid = paidAmounts[name] ?? 0;
+                                    double credit = splitedAmount;
+                                    double creditPerPerson = paid - credit;
+                                    if (creditPerPerson < 0)
+                                      creditPerPerson = 0;
+                                    double remaining = credit - paid;
+                                    if (remaining < 0) remaining = 0;
 
-                                  return DataRow(
-                                    cells: [
-                                      DataCell(Text(name)),
-                                      DataCell(Text(paid.toString())),
-                                      DataCell(
-                                        Text(
-                                          creditPerPerson.toStringAsFixed(0),
+                                    return DataRow(
+                                      cells: [
+                                        DataCell(Text(name)),
+                                        DataCell(Text(paid.toString())),
+                                        DataCell(
+                                          Text(
+                                            creditPerPerson.toStringAsFixed(0),
+                                          ),
                                         ),
-                                      ),
-                                      DataCell(
-                                        Text(remaining.toStringAsFixed(0)),
-                                      ),
-                                    ],
-                                  );
-                                }).toList(),
+                                        DataCell(
+                                          Text(remaining.toStringAsFixed(0)),
+                                        ),
+                                      ],
+                                    );
+                                  }).toList(),
+                            ),
                           ),
                         ],
                       ),
