@@ -1,4 +1,4 @@
-📌 Split Trip Expenses
+<h4>📌 Split Trip Expenses:</h4> </br>
 Split Trip Expenses is a simple and intuitive mobile application that helps you manage and track expenses for group trips.
 You can easily create trips, record expenses, and split costs among participants.</br>
 <img width="155" height="380" alt="image" src="https://github.com/user-attachments/assets/3c96e1af-6877-4ea0-9448-f071ccf56b37" />
