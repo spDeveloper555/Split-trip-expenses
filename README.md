@@ -1,16 +1,8 @@
-# trip_split
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+📌 Split Trip Expenses
+Split Trip Expenses is a simple and intuitive mobile application that helps you manage and track expenses for group trips.
+You can easily create trips, record expenses, and split costs among participants.
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/3c96e1af-6877-4ea0-9448-f071ccf56b37" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/b6b95ab1-b516-45ba-8018-e4ad68da1c42" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/c8c7310a-42ff-4e6c-886c-bde2ed2ca92d" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/233956da-5c00-4b64-81a5-183de7404cbf" />
+<img width="720" height="1520" alt="image" src="https://github.com/user-attachments/assets/49102ae4-d298-4a09-bffe-4e17c53371fe" />
